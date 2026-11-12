@@ -4,231 +4,306 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zarar Khan | Pharm-D Student</title>
-<meta name="description" content="Academic portfolio of Zarar Khan, Pharm-D student at FUUAST, Karachi, working on computational drug discovery.">
+<meta name="description" content="Personal website of Zarar Khan, Pharm-D student at FUUAST, Karachi, working on computational drug discovery.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0c2b3a; --navy2:#12394b; --teal:#167c80; --ink:#13232b; --muted:#53666e;
-  --paper:#f4f8f9; --white:#fff; --line:#d3e0e3; --amber:#e8a33d;
-  --serif:"Fraunces",Georgia,"Times New Roman",serif;
-  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
-  --lattice:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34zM28 66v34M0 84l28 16 28-16M0 84V50M56 84V50' fill='none' stroke='rgba(255,255,255,0.11)' stroke-width='1.5'/%3E%3C/svg%3E");
+  --head:#2c3e50; --body:#4a5560; --blue:#2678b8; --blue-soft:#e8f1f8; --green:#27ae60; --green-soft:#d9f0e2;
+  --bg:#fdfdfd; --band:#f4f7fa; --line:#e3e9ef;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.06rem;line-height:1.7}
-a{color:var(--teal)}
-a:focus-visible,.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-.topbar{position:sticky;top:0;z-index:10;background:rgba(12,43,58,.96);backdrop-filter:blur(6px)}
-.topbar .in{max-width:1040px;margin:0 auto;padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
-.brand{font-family:var(--serif);color:#fff;font-weight:600;font-size:1.15rem;text-decoration:none;white-space:nowrap}
-.topbar nav{display:flex;gap:1.3rem;overflow-x:auto}
-.topbar nav a{color:#c9dde3;text-decoration:none;font-size:.97rem;white-space:nowrap;padding:.2rem 0;border-bottom:2px solid transparent}
-.topbar nav a:hover{color:#fff;border-bottom-color:var(--amber)}
-.hero{background:var(--navy) var(--lattice);color:#fff}
-.hero .in{max-width:1040px;margin:0 auto;padding:4.5rem 1.5rem 4.5rem;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
-.avatar{position:relative;width:170px;height:170px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-family:var(--serif);font-size:3.2rem;border:5px solid rgba(255,255,255,.9);overflow:hidden}
-.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.02;margin:0 0 .9rem;letter-spacing:-.01em}
-.hero p{margin:0 0 .6rem;max-width:52ch}
-.hero .lead{font-size:1.25rem;color:#e3eef1}
-.hero .sub{color:#aac6cf}
-.actions{margin-top:1.6rem}
-.btn{display:inline-block;padding:.7rem 1.3rem;border-radius:6px;font-weight:600;text-decoration:none;margin:0 .6rem .6rem 0}
-.btn.main{background:var(--amber);color:var(--navy)}
-.btn.main:hover{background:#f2b857}
-.btn.ghost{border:1.5px solid rgba(255,255,255,.7);color:#fff}
-.btn.ghost:hover{background:rgba(255,255,255,.12)}
-main{max-width:1040px;margin:0 auto;padding:0 1.5rem}
-section{padding:4rem 0 0}
-h2{font-family:var(--serif);font-weight:600;font-size:2rem;line-height:1.15;margin:0 0 1.5rem;color:var(--navy)}
-h3{font-size:1.08rem;font-weight:600;margin:0}
-p{margin:0 0 1rem;max-width:68ch}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.about p:first-child{font-family:var(--serif);font-size:1.4rem;line-height:1.45;color:var(--navy)}
-.feature{background:var(--navy) var(--lattice);color:#fff;border-radius:14px;padding:2.5rem}
-.feature h3{font-family:var(--serif);font-size:1.7rem;font-weight:600;line-height:1.2;max-width:26ch}
-.feature p{color:#d6e6ea}
-.status{display:inline-block;background:var(--amber);color:var(--navy);font-size:.85rem;font-weight:600;padding:.1rem .7rem;border-radius:99px;margin-bottom:.9rem}
-.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.6rem 0 0;padding:0;list-style:none}
-.flow li{border-top:3px solid var(--amber);padding-top:.7rem;font-weight:500}
-.flow span{display:block;font-weight:400;color:#aac6cf;font-size:.95rem}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.timeline{margin:0;padding:0 0 0 1.6rem;border-left:2px solid var(--line);list-style:none}
-.timeline li{position:relative;margin-bottom:1.7rem}
-.timeline li::before{content:"";position:absolute;left:calc(-1.6rem - .4rem - 1px);top:.5rem;width:.8rem;height:.8rem;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px var(--paper)}
-.meta{color:var(--muted);font-size:.95rem;margin:.1rem 0 .4rem}
-.timeline ul{margin:.4rem 0 0;padding-left:1.1rem}
-.timeline ul li{margin-bottom:.25rem}
-.timeline ul li::before{display:none}
-.events{columns:2;column-gap:3rem;margin:0;padding:0;list-style:none}
-.events li{break-inside:avoid;padding:.8rem 0;border-bottom:1px solid var(--line)}
-.events small{display:block;color:var(--muted);font-size:.93rem}
-.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:.7rem 0 0;padding:0;list-style:none}
-.tags li{background:var(--white);border:1px solid var(--line);border-radius:99px;padding:.25rem .85rem;font-size:.97rem}
-.contact{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:2.2rem}
-.contact p{margin-bottom:.5rem}
-footer{max-width:1040px;margin:0 auto;padding:3.5rem 1.5rem 3rem;color:var(--muted);font-size:.92rem}
-@media (max-width:820px){
-  .hero .in{grid-template-columns:1fr;gap:1.8rem;padding:3rem 1.5rem}
-  .avatar{width:130px;height:130px;font-size:2.4rem}
-  .about,.two{grid-template-columns:1fr;gap:2rem}
-  .flow{grid-template-columns:1fr}
-  .events{columns:1}
-  .feature{padding:1.7rem}
-  .topbar .brand{display:none}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--font);font-size:1.05rem;line-height:1.75}
+a{color:var(--blue)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.5rem}
+.topbar{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-top:1.1rem;padding-bottom:1.1rem}
+.brand{font-weight:700;font-size:1.2rem;color:var(--head);text-decoration:none;white-space:nowrap}
+.topbar nav{display:flex;gap:1.8rem;overflow-x:auto}
+.topbar nav a{color:var(--head);text-decoration:none;font-weight:500;white-space:nowrap}
+.topbar nav a:hover,.topbar nav a.on{color:var(--blue)}
+.hero .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;align-items:center;padding-top:5rem;padding-bottom:5.5rem}
+h1{font-weight:800;color:var(--head);font-size:clamp(2.6rem,5.5vw,4.4rem);line-height:1.08;margin:0 0 1.2rem;letter-spacing:-.02em}
+.sub{color:var(--blue);font-size:1.45rem;font-weight:500;margin:0 0 1.4rem}
+.hero p.intro{max-width:56ch;margin:0 0 1.8rem}
+.btn{display:inline-block;padding:.7rem 1.5rem;border-radius:8px;font-weight:600;text-decoration:none;margin:0 .6rem .6rem 0}
+.btn.fill{background:var(--blue);color:#fff}
+.btn.fill:hover{background:#1f6399}
+.btn.out{border:2px solid var(--blue);color:var(--blue)}
+.btn.out:hover{background:var(--blue-soft)}
+.photo{position:relative;width:260px;height:260px;margin:0 auto;border-radius:50%;border:5px solid var(--blue);box-shadow:0 12px 30px rgba(44,62,80,.2);background:var(--head);color:#fff;display:grid;place-items:center;font-size:3.4rem;font-weight:700;overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+section{padding:4.5rem 0}
+section.band{background:var(--band)}
+h2{font-size:2.4rem;font-weight:800;color:var(--head);text-align:center;margin:0 0 3rem;line-height:1.2}
+h2::after{content:"";display:block;width:64px;height:4px;background:var(--blue);border-radius:2px;margin:.9rem auto 0}
+h3{font-size:1.2rem;font-weight:700;color:var(--head);margin:0 0 .5rem;line-height:1.35}
+h4{font-size:1.3rem;font-weight:700;color:var(--head);margin:0 0 1.4rem}
+p{margin:0 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.6rem}
+.card{background:#fff;border-radius:10px;border-left:5px solid var(--green);padding:1.7rem;box-shadow:0 2px 14px rgba(44,62,80,.08)}
+.card.blue{border-left-color:var(--blue)}
+.date{color:var(--blue);font-weight:700;font-size:.95rem;margin:0 0 .6rem}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.badge{display:inline-block;background:var(--green-soft);color:#1b7a43;font-weight:700;font-size:.82rem;padding:.2rem .8rem;border-radius:99px;white-space:nowrap}
+.badge.b{background:var(--blue-soft);color:var(--blue)}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 0;padding:0;list-style:none}
+.tags li{background:var(--blue-soft);color:var(--blue);font-weight:600;font-size:.9rem;padding:.25rem .85rem;border-radius:99px}
+.bio{display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:start}
+.bio h4{margin-bottom:1rem}
+.interests{background:#fff;border-radius:12px;padding:1.8rem;box-shadow:0 2px 14px rgba(44,62,80,.08)}
+.interests ul{margin:0;padding-left:1.2rem}
+.interests li{margin-bottom:.8rem}
+.interests li::marker{color:var(--blue)}
+.sub-h{margin:0 0 1.4rem}
+.block+.block{margin-top:3rem}
+.meta{color:var(--blue);font-weight:600;font-size:.95rem;margin:0 0 .6rem}
+.card ul.pts{margin:.4rem 0 0;padding-left:1.15rem}
+.card ul.pts li{margin-bottom:.3rem}
+.card small{display:block;color:#6a7682;font-size:.92rem}
+.contact{max-width:640px;margin:0 auto;text-align:center}
+.contact .card{text-align:left}
+footer{border-top:1px solid var(--line);padding:2rem 0;text-align:center;font-size:.92rem;color:#6a7682}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:3rem;padding-bottom:3.5rem;gap:2.2rem}
+  .photo{width:200px;height:200px;order:-1;margin:0}
+  .bio{grid-template-columns:1fr;gap:2rem}
+  h2{font-size:2rem}
+  section{padding:3.2rem 0}
+  .brand{display:none}
 }
 </style>
 </head>
 <body>
 
 <header class="topbar">
-  <div class="in">
-    <a class="brand" href="#top">Zarar Khan</a>
+  <div class="wrap">
+    <a class="brand" href="#home">Zarar Khan</a>
     <nav aria-label="Sections">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#background">Background</a>
+      <a href="#community">Community</a>
       <a href="#events">Events</a>
-      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<div class="hero" id="top">
-  <div class="in">
-    <div class="avatar">ZK<img src="photo.jpg" alt="Portrait of Zarar Khan" onerror="this.remove()"></div>
+<div class="hero" id="home">
+  <div class="wrap">
     <div>
-      <h1>Zarar Khan</h1>
-      <p class="lead">Pharm-D student working on computational drug discovery against tuberculosis.</p>
-      <p class="sub">Federal Urdu University of Arts, Science and Technology (FUUAST), Karachi, Pakistan</p>
-      <div class="actions">
-        <a class="btn main" href="Zarar-Khan-CV.pdf">Download CV</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/zarar-khan-1173723a5" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
-      </div>
+      <h1>Hi, I’m Zarar Khan</h1>
+      <p class="sub">Pharm-D student, computational drug discovery</p>
+      <p class="intro">I study at FUUAST in Karachi and work on in silico methods that help find new medicines. My current project looks at a tuberculosis drug target called DprE1. I am preparing for international graduate study in Europe.</p>
+      <a class="btn fill" href="Zarar-Khan-CV.pdf">Download CV</a>
+      <a class="btn out" href="https://www.linkedin.com/in/zarar-khan-1173723a5" target="_blank" rel="noopener">LinkedIn</a>
     </div>
+    <div class="photo">ZK<img src="photo.jpg" alt="Portrait of Zarar Khan" onerror="this.remove()"></div>
   </div>
 </div>
 
-<main>
-  <section id="about">
+<section class="band" id="news">
+  <div class="wrap">
+    <h2>News</h2>
+    <div class="grid">
+      <article class="card blue">
+        <p class="date">November 2026</p>
+        <h3>Personal website launched</h3>
+        <p>My academic portfolio is now online, with my research, experience and events in one place.</p>
+        <span class="badge b">Update</span>
+      </article>
+      <article class="card blue">
+        <p class="date">In progress</p>
+        <h3>Working on DprE1 for tuberculosis drug discovery</h3>
+        <p>My in silico project uses molecular docking and ADMET evaluation to study candidate compounds against DprE1.</p>
+        <span class="badge b">Research</span>
+      </article>
+      <article class="card blue">
+        <p class="date">30 August 2025</p>
+        <h3>Completed the Aghosh Internship</h3>
+        <p>I finished a six-week internship at Alkhidmat Foundation Karachi, focused on community service and management.</p>
+        <span class="badge b">Experience</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
     <h2>About</h2>
-    <div class="about">
-      <p>I study how potential medicines meet disease targets, using docking, ADMET prediction and virtual screening.</p>
+    <div class="bio">
       <div>
-        <p>I am a Pharm-D student at FUUAST in Karachi, expected to graduate in December 2028. Alongside my degree, I build practical experience through internships, in silico research, and volunteer work such as breast cancer awareness programs and public speaking.</p>
+        <h4>About me</h4>
+        <p>I am a Pharm-D student at the Federal Urdu University of Arts, Science and Technology (FUUAST) in Karachi, expected to graduate in December 2028. My main interest is how potential medicines meet disease targets, which I study with docking, ADMET prediction and virtual screening.</p>
+        <p>Alongside my degree, I build practical experience through internships, in silico research, and volunteer work such as breast cancer awareness programs and public speaking.</p>
         <p>I am looking for international graduate opportunities, including Erasmus Mundus Joint Master’s programmes and scholarships in Europe.</p>
       </div>
+      <aside class="interests" aria-label="Research interests">
+        <h4>Research interests</h4>
+        <ul>
+          <li>Computational drug discovery: docking, ADMET and virtual screening</li>
+          <li>Tuberculosis drug targets, such as DprE1</li>
+          <li>In silico and data-driven approaches to cancer research</li>
+          <li>Community pharmacy and public health</li>
+        </ul>
+      </aside>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="research">
+<section class="band" id="research">
+  <div class="wrap">
     <h2>Research</h2>
-    <div class="feature">
-      <span class="status">Ongoing</span>
-      <h3>Targeting DprE1 in tuberculosis drug discovery</h3>
-      <p>This continuing in silico project focuses on DprE1 (decaprenylphosphoryl-β-D-ribose 2′-epimerase), an enzyme essential for building the cell wall of <em>Mycobacterium tuberculosis</em> and an established target for new anti-TB agents.</p>
-      <p>The work uses molecular docking to study how candidate compounds bind to DprE1, followed by ADMET and drug-likeness evaluation to assess their pharmacokinetic and safety profiles, with tools such as CB-Dock and SwissADME.</p>
-      <ul class="flow" aria-label="Project workflow">
-        <li>Target<span>DprE1 enzyme</span></li>
-        <li>Molecular docking<span>CB-Dock</span></li>
-        <li>ADMET and drug-likeness<span>SwissADME</span></li>
+    <h4 class="sub-h">Research projects</h4>
+    <div class="grid">
+      <article class="card">
+        <div class="top">
+          <h3>Targeting DprE1 in tuberculosis drug discovery</h3>
+          <span class="badge">Ongoing</span>
+        </div>
+        <p class="meta">In silico project</p>
+        <p>This continuing project focuses on DprE1 (decaprenylphosphoryl-β-D-ribose 2′-epimerase), an enzyme essential for building the cell wall of <em>Mycobacterium tuberculosis</em> and an established target for new anti-TB agents.</p>
+        <p>I use molecular docking to study how candidate compounds bind to DprE1, followed by ADMET and drug-likeness evaluation to assess their pharmacokinetic and safety profiles.</p>
+        <ul class="tags">
+          <li>Tuberculosis</li>
+          <li>DprE1</li>
+          <li>Molecular docking</li>
+          <li>ADMET</li>
+          <li>CB-Dock</li>
+          <li>SwissADME</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="background">
+  <div class="wrap">
+    <h2>Background</h2>
+    <div class="block">
+      <h4 class="sub-h">Education</h4>
+      <div class="grid">
+        <article class="card">
+          <h3>Doctor of Pharmacy (Pharm-D)</h3>
+          <p class="meta">February 2024 to present</p>
+          <p>FUUAST, Karachi. A five-year degree covering pharmacology, pharmaceutics, analytical chemistry, microbiology, biochemistry and dispensing pharmacy. Expected graduation: December 2028.</p>
+        </article>
+        <article class="card">
+          <h3>FSc, Pre-Medical</h3>
+          <p class="meta">2019 to 2021</p>
+        </article>
+        <article class="card">
+          <h3>SSC, Science</h3>
+          <p class="meta">2017 to 2019</p>
+        </article>
+      </div>
+    </div>
+    <div class="block">
+      <h4 class="sub-h">Experience</h4>
+      <div class="grid">
+        <article class="card">
+          <h3>Aghosh Internship, Alkhidmat Foundation Karachi</h3>
+          <p class="meta">15 July to 30 August 2025</p>
+          <ul class="pts">
+            <li>Learned about the humanitarian and healthcare initiatives of the foundation.</li>
+            <li>Completed coursework and assignments on community service and management.</li>
+            <li>Built skills in teamwork, coordination and social responsibility.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <div class="block">
+      <h4 class="sub-h">Skills and languages</h4>
+      <ul class="tags">
+        <li>Molecular docking (CB-Dock)</li>
+        <li>ADMET prediction (SwissADME)</li>
+        <li>Microsoft Office</li>
+        <li>PowerPoint</li>
+        <li>Excel</li>
+        <li>Zoom</li>
+        <li>Planning and organization</li>
+        <li>Communication</li>
+        <li>Pashto (mother tongue)</li>
+        <li>Urdu (mother tongue)</li>
+        <li>English</li>
       </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="background">
-    <div class="two">
-      <div>
-        <h2>Education</h2>
-        <ul class="timeline">
-          <li>
-            <h3>Doctor of Pharmacy (Pharm-D)</h3>
-            <p class="meta">FUUAST, Karachi. Feb 2024 to present, expected Dec 2028</p>
-            <p>Five-year degree covering pharmacology, pharmaceutics, analytical chemistry, microbiology, biochemistry and dispensing pharmacy.</p>
-          </li>
-          <li>
-            <h3>FSc, Pre-Medical</h3>
-            <p class="meta">2019 to 2021</p>
-          </li>
-          <li>
-            <h3>SSC, Science</h3>
-            <p class="meta">2017 to 2019</p>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>Experience</h2>
-        <ul class="timeline">
-          <li>
-            <h3>Aghosh Internship, Alkhidmat Foundation Karachi</h3>
-            <p class="meta">15 July to 30 August 2025</p>
-            <ul>
-              <li>Learned about the humanitarian and healthcare initiatives of the foundation.</li>
-              <li>Completed coursework and assignments on community service and management.</li>
-              <li>Built skills in teamwork, coordination and social responsibility.</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+<section class="band" id="community">
+  <div class="wrap">
+    <h2>Community</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Awareness programs</h3>
+        <p>I have taken part in health awareness programs, including breast cancer awareness.</p>
+      </article>
+      <article class="card">
+        <h3>Public speaking</h3>
+        <p>I have taken part in public speaking activities and attended a two-day public speaking seminar at FUUAST.</p>
+      </article>
+      <article class="card">
+        <h3>Volunteer work</h3>
+        <p>I am active in volunteer work and professional development activities, with a commitment to community health.</p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="events">
+<section id="events">
+  <div class="wrap">
     <h2>Conferences and seminars</h2>
-    <ul class="events">
-      <li>1st ICPPS-25<small>Salim Habib University, Karachi</small></li>
-      <li>1st Scientific Conference on Healthy Aging and Social Inclusiveness<small>VCARE, Arts Council Karachi</small></li>
-      <li>Role of Pharmacists in Community Workshop<small>FUUAST, Karachi</small></li>
-      <li>PHARMACON ’25<small>FUUAST, Karachi</small></li>
-      <li>Public Speaking Seminar, 2 days<small>FUUAST, Karachi</small></li>
-      <li>HVP Youth Convention ’25<small>Help International Welfare Trust, Karachi</small></li>
-      <li>Alkhidmat Youth Gathering<small>Alkhidmat Foundation Karachi</small></li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <div class="two">
-      <div>
-        <h2>Skills</h2>
-        <ul class="tags">
-          <li>Molecular docking (CB-Dock)</li>
-          <li>ADMET prediction (SwissADME)</li>
-          <li>Microsoft Office</li>
-          <li>PowerPoint</li>
-          <li>Excel</li>
-          <li>Zoom</li>
-          <li>Planning and organization</li>
-          <li>Communication</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Languages</h2>
-        <ul class="tags">
-          <li>Pashto, mother tongue</li>
-          <li>Urdu, mother tongue</li>
-          <li>English</li>
-        </ul>
-      </div>
+    <div class="grid">
+      <article class="card blue"><h3>1st ICPPS-25</h3><small>Salim Habib University, Karachi</small></article>
+      <article class="card blue"><h3>1st Scientific Conference on Healthy Aging and Social Inclusiveness</h3><small>VCARE, Arts Council Karachi</small></article>
+      <article class="card blue"><h3>Role of Pharmacists in Community Workshop</h3><small>FUUAST, Karachi</small></article>
+      <article class="card blue"><h3>PHARMACON ’25</h3><small>FUUAST, Karachi</small></article>
+      <article class="card blue"><h3>Public Speaking Seminar, 2 days</h3><small>FUUAST, Karachi</small></article>
+      <article class="card blue"><h3>HVP Youth Convention ’25</h3><small>Help International Welfare Trust, Karachi</small></article>
+      <article class="card blue"><h3>Alkhidmat Youth Gathering</h3><small>Alkhidmat Foundation Karachi</small></article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact">
+<section class="band" id="contact">
+  <div class="wrap contact">
     <h2>Contact</h2>
-    <div class="contact">
-      <p>I am happy to hear from supervisors, programme coordinators and researchers.</p>
+    <p>I am happy to hear from supervisors, programme coordinators and researchers.</p>
+    <div class="card">
       <p>Email: <a href="mailto:zarrarzk99@gmail.com">zarrarzk99@gmail.com</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/zarar-khan-1173723a5" target="_blank" rel="noopener">linkedin.com/in/zarar-khan-1173723a5</a></p>
+      <a class="btn fill" href="Zarar-Khan-CV.pdf">Download CV</a>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer>© 2026 Zarar Khan</footer>
 
+<script>
+(function(){
+  var links=document.querySelectorAll('.topbar nav a');
+  if(!('IntersectionObserver' in window)) return;
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){a.classList.remove('on');});
+        var a=map[e.target.id]; if(a) a.classList.add('on');
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){var el=document.getElementById(id); if(el) io.observe(el);});
+})();
+</script>
 </body>
 </html>
